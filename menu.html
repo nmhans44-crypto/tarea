@@ -2,115 +2,118 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú - Sabores de España</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <div class="brand">🍷 Sabores de España</div>
-      <button class="menu-btn" id="menu-btn">☰</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menú</a></li>
-        <li><a href="reservas.html" id="auth-link">Login</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="admin.html" id="admin-link" class="hidden">Admin</a></li>
-        <li><button id="logout-btn">Salir</button></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1 class="section-title">Menú Español</h1>
-    <p>Disfruta una selección de platillos y bebidas tradicionales de España.</p>
+<header>
+  <nav class="nav">
+    <div class="brand">🍷 Sabores de España</div>
+  </nav>
+</header>
 
-    <h2 class="section-title">Entradas</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Tortilla española" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Tortilla española</h3>
-        <p>Clásica tortilla de papa con huevo, suave y deliciosa.</p>
-      </article>
+<main>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=900&q=80" alt="Tapas variadas" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Tapas variadas</h3>
-        <p>Pequeñas porciones con jamón, aceitunas, queso y pan con tomate.</p>
-      </article>
+<h1 class="section-title">Menú Español</h1>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80" alt="Gazpacho" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Gazpacho</h3>
-        <p>Sopa fría de tomate, ideal para un día caluroso.</p>
-      </article>
-    </div>
+<!-- ENTRADAS -->
+<h2>Entradas</h2>
+<div class="grid grid-3">
 
-    <h2 class="section-title">Platos fuertes</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1515443960934-69d5e6f1e2ae?auto=format&fit=crop&w=900&q=80" alt="Paella" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Paella española</h3>
-        <p>Arroz con mariscos, pollo y un sabor tradicional incomparable.</p>
-      </article>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-431f2bcd8c87?auto=format&fit=crop&w=900&q=80">
+    <h3>Tortilla española</h3>
+    <p>Clásica tortilla de papa con huevo.</p>
+  </div>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1603131327551-5e8f0d1d8f4f?auto=format&fit=crop&w=900&q=80" alt="Pulpo a la gallega" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Pulpo a la gallega</h3>
-        <p>Pulpo tierno con paprika, aceite de oliva y papas.</p>
-      </article>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80">
+    <h3>Gazpacho</h3>
+    <p>Sopa fría de tomate refrescante.</p>
+  </div>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1571168136402-62e7a1f9f6c4?auto=format&fit=crop&w=900&q=80" alt="Fideuá" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Fideuá</h3>
-        <p>Plato similar a la paella pero preparado con fideos y mariscos.</p>
-      </article>
-    </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=900&q=80">
+    <h3>Tapas</h3>
+    <p>Variedad de aperitivos tradicionales.</p>
+  </div>
 
-    <h2 class="section-title">Postres</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Churros con chocolate" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Churros con chocolate</h3>
-        <p>Postre clásico español, crujiente por fuera y suave por dentro.</p>
-      </article>
+</div>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Flan" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Flan casero</h3>
-        <p>Postre dulce y cremoso con caramelo.</p>
-      </article>
+<!-- PLATOS FUERTES -->
+<h2>Platos fuertes</h2>
+<div class="grid grid-3">
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=900&q=80" alt="Crema catalana" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Crema catalana</h3>
-        <p>Crema tradicional con capa de azúcar caramelizada.</p>
-      </article>
-    </div>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1604908176997-431f2bcd8c87?auto=format&fit=crop&w=900&q=80">
+    <h3>Paella española</h3>
+    <p>Arroz con mariscos y pollo.</p>
+  </div>
 
-    <h2 class="section-title">Bebidas</h2>
-    <div class="grid grid-3">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1514361892635-e2ae0bfb8d5d?auto=format&fit=crop&w=900&q=80" alt="Sangría" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Sangría</h3>
-        <p>Bebida refrescante con frutas y sabor tradicional español.</p>
-      </article>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1603131327551-5e8f0d1d8f4f?auto=format&fit=crop&w=900&q=80">
+    <h3>Pulpo a la gallega</h3>
+    <p>Pulpo con aceite de oliva y paprika.</p>
+  </div>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1f9fd?auto=format&fit=crop&w=900&q=80" alt="Tinto de verano" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Tinto de verano</h3>
-        <p>Refresco con vino tinto y gas, ideal para acompañar la comida.</p>
-      </article>
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1571168136402-62e7a1f9f6c4?auto=format&fit=crop&w=900&q=80">
+    <h3>Fideuá</h3>
+    <p>Similar a la paella pero con fideos.</p>
+  </div>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80" alt="Café español" style="width:100%; border-radius:16px; height:220px; object-fit:cover;">
-        <h3>Café español</h3>
-        <p>Perfecto para terminar la comida con un toque cálido.</p>
-      </article>
-    </div>
-  </main>
+</div>
+
+<!-- POSTRES -->
+<h2>Postres</h2>
+<div class="grid grid-3">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80">
+    <h3>Churros</h3>
+    <p>Con chocolate caliente.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80">
+    <h3>Flan</h3>
+    <p>Postre cremoso tradicional.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=900&q=80">
+    <h3>Crema catalana</h3>
+    <p>Con azúcar caramelizada.</p>
+  </div>
+
+</div>
+
+<!-- BEBIDAS -->
+<h2>Bebidas</h2>
+<div class="grid grid-3">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1514361892635-e2ae0bfb8d5d?auto=format&fit=crop&w=900&q=80">
+    <h3>Sangría</h3>
+    <p>Bebida refrescante con frutas.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1f9fd?auto=format&fit=crop&w=900&q=80">
+    <h3>Tinto de verano</h3>
+    <p>Refresco con vino tinto.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80">
+    <h3>Café</h3>
+    <p>Perfecto para terminar la comida.</p>
+  </div>
+
+</div>
+
+</main>
 
 <footer>
   <p>📞 Contáctanos: 5618504578</p>
@@ -118,6 +121,5 @@
   <p>© 2026 Sabores de España</p>
 </footer>
 
-  <script type="module" src="js/app.js"></script>
 </body>
 </html>
