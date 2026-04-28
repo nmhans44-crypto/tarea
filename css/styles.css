@@ -1,0 +1,297 @@
+:root {
+  --vino: #8b0000;
+  --dorado: #d4af37;
+  --fondo: #fffaf3;
+  --texto: #1f1f1f;
+  --blanco: #ffffff;
+  --gris: #f2f2f2;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: var(--vino);
+  color: var(--blanco);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a,
+.nav-links button {
+  color: var(--blanco);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: .5rem .75rem;
+  border-radius: 10px;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.3);
+  color: var(--blanco);
+  font-size: 1.2rem;
+  padding: .45rem .75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.hero {
+  min-height: 56vh;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80") center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--sombra);
+}
+
+.hero-content {
+  max-width: 680px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  margin: 0 0 .8rem;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--dorado);
+  color: #111;
+  border: none;
+  padding: .85rem 1.2rem;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  filter: brightness(.95);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: var(--sombra);
+}
+
+.card h3,
+.card h2 {
+  margin-top: 0;
+}
+
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: #fff0c2;
+  color: #7a5a00;
+  font-size: .85rem;
+  margin-bottom: .6rem;
+}
+
+.form {
+  display: grid;
+  gap: .9rem;
+  max-width: 520px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: .9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font: inherit;
+  background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--vino);
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+th, td {
+  padding: .9rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #f9efe0;
+}
+
+footer {
+  margin-top: 3rem;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1.4rem;
+}
+
+.notice {
+  margin-top: 1rem;
+  padding: .9rem 1rem;
+  border-radius: 12px;
+  background: var(--gris);
+}
+
+.notice.success {
+  background: #e8fff1;
+  color: #126b34;
+}
+
+.notice.error {
+  background: #fff0f0;
+  color: #9c1c1c;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 756px) {
+  .menu-btn {
+    display: inline-block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 1rem;
+    right: 1rem;
+    background: var(--vino);
+    border-radius: 18px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: .75rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 48vh;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: .9rem;
+  }
+
+  .hero-content {
+    padding: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Sabores de España</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">🍷 Sabores de España</div>
+      <button class="menu-btn" id="menu-btn">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="reservas.html" id="auth-link">Login</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="admin.html" id="admin-link" class="hidden">Admin</a></li>
+        <li><button id="logout-btn">Salir</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="section-title">Nuestro menú</h1>
+
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="badge">Entradas</span>
+        <h3>Tapas variadas</h3>
+        <p>Jamón ibérico, croquetas, aceitunas y pan con tomate.</p>
+      </article>
+      <article class="card">
+        <span class="badge">Plato fuerte</span>
+        <h3>Paella española</h3>
+        <p>Arroz con mariscos, pollo y sabor tradicional.</p>
+      </article>
+      <article class="card">
+        <span class="badge">Postre</span>
+        <h3>Churros con chocolate</h3>
+        <p>Dulce clásico servido caliente.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>© 2026 Sabores de España</footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
