@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú - Sabores de España</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -10,51 +11,121 @@
 <header>
   <nav class="nav">
     <div class="brand">🍷 Sabores de España</div>
+    <button class="menu-btn" id="menu-btn">☰</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menu.html">Menú</a></li>
+      <li><a href="reservas.html" id="auth-link">Login</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="admin.html" id="admin-link" class="hidden">Admin</a></li>
+      <li><button id="logout-btn">Salir</button></li>
+    </ul>
   </nav>
 </header>
 
 <main>
+  <h1 class="section-title">Menú Español</h1>
 
-<h1 class="section-title">Menú Español</h1>
+  <section>
+    <h2 class="section-title">Entradas</h2>
+    <div class="grid grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1604908176997-431f2bcd8c87?auto=format&fit=crop&w=900&q=80" alt="Tortilla española">
+        <h3>Tortilla española</h3>
+        <p>Clásica tortilla de papa con huevo.</p>
+      </article>
 
-<!-- ENTRADAS -->
-<section class="card">
-  <h2>Entradas</h2>
-  <p>🥔 Tortilla española</p>
-  <p>🍅 Gazpacho</p>
-  <p>🍤 Tapas variadas</p>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80" alt="Gazpacho">
+        <h3>Gazpacho</h3>
+        <p>Sopa fría de tomate refrescante.</p>
+      </article>
 
-<!-- PLATOS FUERTES -->
-<section class="card">
-  <h2>Platos fuertes</h2>
-  <p>🥘 Paella española</p>
-  <p>🐙 Pulpo a la gallega</p>
-  <p>🍝 Fideuá</p>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?auto=format&fit=crop&w=900&q=80" alt="Tapas variadas">
+        <h3>Tapas variadas</h3>
+        <p>Aperitivos tradicionales con mucho sabor.</p>
+      </article>
+    </div>
+  </section>
 
-<!-- POSTRES -->
-<section class="card">
-  <h2>Postres</h2>
-  <p>🍩 Churros con chocolate</p>
-  <p>🍮 Flan</p>
-  <p>🍮 Crema catalana</p>
-</section>
+  <section>
+    <h2 class="section-title">Platos fuertes</h2>
+    <div class="grid grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515443960934-69d5e6f1e2ae?auto=format&fit=crop&w=900&q=80" alt="Paella española">
+        <h3>Paella española</h3>
+        <p>Arroz con mariscos y pollo.</p>
+      </article>
 
-<!-- BEBIDAS -->
-<section class="card">
-  <h2>Bebidas</h2>
-  <p>🍷 Sangría</p>
-  <p>🥤 Tinto de verano</p>
-  <p>☕ Café español</p>
-</section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1603131327551-5e8f0d1d8f4f?auto=format&fit=crop&w=900&q=80" alt="Pulpo a la gallega">
+        <h3>Pulpo a la gallega</h3>
+        <p>Pulpo con aceite de oliva y paprika.</p>
+      </article>
 
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1571168136402-62e7a1f9f6c4?auto=format&fit=crop&w=900&q=80" alt="Fideuá">
+        <h3>Fideuá</h3>
+        <p>Similar a la paella, pero con fideos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Postres</h2>
+    <div class="grid grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80" alt="Churros con chocolate">
+        <h3>Churros con chocolate</h3>
+        <p>Postre clásico español, crujiente y dulce.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Flan casero">
+        <h3>Flan casero</h3>
+        <p>Suave, cremoso y con caramelo.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=900&q=80" alt="Crema catalana">
+        <h3>Crema catalana</h3>
+        <p>Con azúcar caramelizada por encima.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Bebidas</h2>
+    <div class="grid grid-3">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1514361892635-e2ae0bfb8d5d?auto=format&fit=crop&w=900&q=80" alt="Sangría">
+        <h3>Sangría</h3>
+        <p>Bebida refrescante con frutas.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1f9fd?auto=format&fit=crop&w=900&q=80" alt="Tinto de verano">
+        <h3>Tinto de verano</h3>
+        <p>Vino tinto con refresco y hielo.</p>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=900&q=80" alt="Café español">
+        <h3>Café español</h3>
+        <p>Ideal para terminar la comida.</p>
+      </article>
+    </div>
+  </section>
 </main>
 
 <footer>
   <p>📞 Contáctanos: 5618504578</p>
+  <p>📍 Ecatepec, México</p>
   <p>© 2026 Sabores de España</p>
 </footer>
 
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
