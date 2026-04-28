@@ -307,3 +307,37 @@ footer {
 footer p {
   margin: 5px 0;
 }
+/* FIX TOTAL DEL DISEÑO */
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  background: #ddd;
+}
+
+footer {
+  margin-top: 3rem;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
