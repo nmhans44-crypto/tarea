@@ -101,9 +101,13 @@ if (form) {
     }
   });
 }
-document.querySelectorAll(".mesa").forEach(mesa => {
-  mesa.addEventListener("click", () => {
-    mesa.classList.toggle("ocupada");
-    mesa.classList.toggle("libre");
+document.addEventListener("DOMContentLoaded", () => {
+  const mesas = document.querySelectorAll(".mesa");
+
+  mesas.forEach(mesa => {
+    mesa.addEventListener("click", () => {
+      mesa.classList.toggle("ocupada");
+      mesa.classList.toggle("libre");
+    });
   });
 });

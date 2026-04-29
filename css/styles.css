@@ -407,3 +407,31 @@ footer p {
   background: red;
   color: white;
 }
+.precio {
+  font-weight: bold;
+  color: #8B0000;
+}
+
+#mesas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.mesa {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.libre {
+  background: green;
+  color: white;
+}
+
+.ocupada {
+  background: red;
+  color: white;
+}
