@@ -1,4 +1,4 @@
-import { db } from "./firebase.js";
+import { db, auth } from "./firebase.js";
 import {
   collection,
   addDoc,
@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
 
     try {
+      const user = auth.currentUser;
+
+      if (!user) {
+        alert("Debes iniciar sesión");
+        return;
+      }
+
       const nombre = document.getElementById("nombre").value;
       const fecha = document.getElementById("fecha").value;
       const hora = document.getElementById("hora").value;
@@ -29,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         hora,
         personas,
         nota,
-        estado: "pendiente"
+        estado: "pendiente",
+        uid: user.uid
       });
 
       alert("✅ Reserva guardada correctamente");
@@ -41,26 +49,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🔥 MOSTRAR RESERVAS EN TIEMPO REAL
+  // 🔥 MOSTRAR SOLO MIS RESERVAS
   onSnapshot(reservasRef, (snapshot) => {
     lista.innerHTML = "";
+
+    const user = auth.currentUser;
 
     snapshot.forEach(doc => {
       const data = doc.data();
 
-      lista.innerHTML += `
-        <tr>
-          <td>${data.nombre}</td>
-          <td>${data.fecha}</td>
-          <td>${data.hora}</td>
-          <td>${data.personas}</td>
-          <td>${data.estado}</td>
-        </tr>
-      `;
+      if (user && data.uid === user.uid) {
+        lista.innerHTML += `
+          <tr>
+            <td>${data.nombre}</td>
+            <td>${data.fecha}</td>
+            <td>${data.hora}</td>
+            <td>${data.personas}</td>
+            <td>${data.estado}</td>
+          </tr>
+        `;
+      }
     });
   });
 
-  // 🔥 MESAS (VISUAL)
+  // 🔥 MESAS VISUALES
   const mesas = document.querySelectorAll(".mesa");
 
   mesas.forEach(mesa => {
