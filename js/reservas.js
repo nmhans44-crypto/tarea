@@ -1,5 +1,9 @@
 import { db } from "./firebase.js";
-import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const fecha = document.getElementById("fecha").value;
-    const hora = document.getElementById("hora").value;
-    const personas = document.getElementById("personas").value;
-    const nota = document.getElementById("nota").value;
-
     try {
+      const nombre = document.getElementById("nombre").value;
+      const fecha = document.getElementById("fecha").value;
+      const hora = document.getElementById("hora").value;
+      const personas = document.getElementById("personas").value;
+      const nota = document.getElementById("nota").value;
+
       const reservasRef = collection(db, "reservas");
       const snapshot = await getDocs(reservasRef);
 
@@ -30,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (ocupado) {
-        alert("❌ Ya hay una reserva en esa fecha y hora");
+        alert("❌ Ya existe una reserva en esa fecha y hora");
         return;
       }
 
@@ -47,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
 
     } catch (error) {
-      console.error(error);
-      alert("Error al guardar la reserva");
+      console.error("🔥 ERROR REAL:", error);
+      alert(error.message); // 👈 AHORA VERÁS EL ERROR REAL
     }
   });
 
-  // 🔥 MESAS (visual)
+  // 🔥 MESAS VISUALES
   const mesas = document.querySelectorAll(".mesa");
 
   mesas.forEach(mesa => {
