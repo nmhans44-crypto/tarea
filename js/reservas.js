@@ -1,14 +1,18 @@
 import { db } from "./firebase.js";
 import {
   collection,
-  addDoc
+  addDoc,
+  onSnapshot
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("reserva-form");
+  const lista = document.getElementById("reservas-list");
 
-  // 🔥 GUARDAR RESERVA (SIMPLE Y FUNCIONANDO)
+  const reservasRef = collection(db, "reservas");
+
+  // 🔥 GUARDAR RESERVA
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const personas = document.getElementById("personas").value;
       const nota = document.getElementById("nota").value;
 
-      await addDoc(collection(db, "reservas"), {
+      await addDoc(reservasRef, {
         nombre,
         fecha,
         hora,
@@ -37,7 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 🔥 MESAS (SOLO VISUAL)
+  // 🔥 MOSTRAR RESERVAS EN TIEMPO REAL
+  onSnapshot(reservasRef, (snapshot) => {
+    lista.innerHTML = "";
+
+    snapshot.forEach(doc => {
+      const data = doc.data();
+
+      lista.innerHTML += `
+        <tr>
+          <td>${data.nombre}</td>
+          <td>${data.fecha}</td>
+          <td>${data.hora}</td>
+          <td>${data.personas}</td>
+          <td>${data.estado}</td>
+        </tr>
+      `;
+    });
+  });
+
+  // 🔥 MESAS (VISUAL)
   const mesas = document.querySelectorAll(".mesa");
 
   mesas.forEach(mesa => {
